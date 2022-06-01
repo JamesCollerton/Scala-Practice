@@ -15,9 +15,10 @@ package basic
   - Traits
   - Type comprehensions
   - Type projections
-  - Generics
+  - Generics, parameterized types, covariant/ contravariant typing,
   - Option, some, none
   - Ammonite
+  - Sealed class hierarchies
  */
 object BasicExamples{
   def main(args: Array[String]): Unit = {
