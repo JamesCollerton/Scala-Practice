@@ -6,6 +6,18 @@ package basic
   are static.
 
   Difference between object, class, case class and traits
+
+  - Spread method
+  - Yield
+  - forSome
+  - Pattern Matching
+  - Sealed
+  - Traits
+  - Type comprehensions
+  - Type projections
+  - Generics
+  - Option, some, none
+  - Ammonite
  */
 object BasicExamples{
   def main(args: Array[String]): Unit = {
@@ -26,5 +38,10 @@ object BasicExamples{
     println(1 to 10 by 3)
     println('a' to 'i' by 3)
 
+    /*
+      Function literals
+     */
+    val doubleInt: (Int) => Int = (a: Int) => 2 * a;
+    println("Doubled: " + doubleInt(2))
   }
 }
