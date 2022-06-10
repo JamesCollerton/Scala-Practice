@@ -45,5 +45,8 @@ object BasicExamples{
      */
     val doubleInt: (Int) => Int = (a: Int) => 2 * a;
     println("Doubled: " + doubleInt(2))
+
+    val ifResult = if(1 % 2 == 0) "This is impossible!" else "This is the result"
+    println(ifResult)
   }
 }
