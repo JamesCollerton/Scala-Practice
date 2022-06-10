@@ -11,7 +11,7 @@ package basic
   - Yield
   - forSome
   - Pattern Matching
-  - Sealed
+  - Sealed, sealed abstract classes
   - Traits
   - Type comprehensions
   - Type projections
@@ -19,6 +19,7 @@ package basic
   - Option, some, none
   - Ammonite
   - Sealed class hierarchies
+  - Package objects
  */
 object BasicExamples{
   def main(args: Array[String]): Unit = {
