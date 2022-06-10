@@ -46,6 +46,7 @@ object BasicExamples{
     val doubleInt: (Int) => Int = (a: Int) => 2 * a;
     println(s"Doubled: ${doubleInt(2)}")
 
+    // If statement results can be assigned to something
     val ifResult = if(1 % 2 == 0) "This is impossible!" else "This is the result"
     println(ifResult)
   }
