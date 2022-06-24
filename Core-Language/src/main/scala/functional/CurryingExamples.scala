@@ -15,7 +15,7 @@ object CurryingExamples {
     val curriedFunction = (uncurriedCat _).curried
     val uncurriedFunction = Function.uncurried(curriedFunction)
 
-    println(s"Uncurried function ${uncurriedFunction("Uncurried", "successfully")}")
+    println(s"Uncurried function: ${uncurriedFunction("Uncurried", "successfully")}")
   }
 
   /*
