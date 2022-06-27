@@ -1,7 +1,7 @@
 package org.example.application
 package functional
 
-object DataStructuresExamples {
+object ListsAndSeqExamples {
 
   /*
     The collection.Seq trait is the abstraction for all mutable and immutable sequential types.
