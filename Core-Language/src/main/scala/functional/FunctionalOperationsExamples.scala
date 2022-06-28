@@ -36,8 +36,7 @@ object FunctionalOperationsExamples {
 
     extendedFiltering()
 
-    // Folding
-    // Reducing
+    foldAndReduce()
 
   }
 
@@ -63,6 +62,37 @@ object FunctionalOperationsExamples {
 
     println(s"Getting first 7 elements of 0 to 10 ${(0 to 10) takeWhile (_ < 7)}")
 
+  }
+
+  def foldAndReduce(): Unit = {
+
+    // Using reduce the initial value is the first value in the list.
+    (1 to 10) reduce((acc, x) => {
+      println(s"Reduce: accumulator value $acc, reduce value $x")
+      acc + x
+    })
+
+    // NOTE, we can't reduce an empty collection, however we can use optionReduce
+    println(s"Empty list reduce ${List.empty[Int].reduceOption(_ + _)}")
+
+    // Using fold there is no guarantee of the first value in the list. We can use fold left and fold right for this
+    ((1 to 10) fold 10) ((acc, x) => {
+      println(s"Fold: accumulator value $acc, reduce value $x")
+      acc + x
+    })
+
+    // We can fold both right and left, left is the default
+    ((1 to 5) fold 10) ((acc, x) => {
+      println(s"Fold right: accumulator value $acc, reduce value $x")
+      acc * x
+    })
+
+    // Note, we can rewrite fold left and fold right as /: and :\ respectively
+
+    // Scan is used to generate a sequence of results that are accumulated as we go through
+    println(s"Scan result ${((1 to 5) scan 10) (_ + _)}")
+
+    // Fold left and reduce left are tail call recursive and work on infinite collections
   }
 
 }
