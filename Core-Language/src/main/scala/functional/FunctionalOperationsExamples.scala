@@ -93,6 +93,9 @@ object FunctionalOperationsExamples {
     println(s"Scan result ${((1 to 5) scan 10) (_ + _)}")
 
     // Fold left and reduce left are tail call recursive and work on infinite collections
+
+    // ((((1 - 2) - 3) - 4) - 5) // = -13 (foldLeft)
+    // (-1 + (-2 + (-3 + (-4 + 5)))) = -5 (foldRight)
   }
 
 }

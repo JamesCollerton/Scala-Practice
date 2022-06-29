@@ -21,6 +21,7 @@ package basic
   - Sealed class hierarchies
   - Package objects
   - What is lifting a function?
+  - Zip functions
  */
 object BasicExamples{
   def main(args: Array[String]): Unit = {
