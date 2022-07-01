@@ -22,6 +22,8 @@ package basic
   - Package objects
   - What is lifting a function?
   - Zip functions
+  - Directives
+  - Futures
  */
 object BasicExamples{
   def main(args: Array[String]): Unit = {
