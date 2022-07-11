@@ -37,10 +37,32 @@ object AsyncExample {
     /*
       This defines an asynchronous way of dealing with getting a record
      */
-    def asyncGetRecord(id: Long): Future[(Long, String)] = async { //
-      val exists = async { val b = recordExists(id); println(b); b }
-      if (await(exists)) await(async { val r = getRecord(id); println(r); r })
-      else (id, "Record not found!")
+    {
+      import scala.concurrent.Future
+      import scala.concurrent.ExecutionContext.Implicits.global
+
+      /*
+        So async is just a wrapper. Notice how the function itself returns a tuple of (Long, String), but then
+        async means it returns a future.
+       */
+      def asyncGetRecord(id: Long): Future[(Long, String)] = async {
+
+        /*
+          Notice how we're wrapping just normal functions in async/ await. We would still need to map around them
+          if we were to combine futures etc.
+         */
+        val exists = async {
+          val b = recordExists(id);
+          println(b);
+          b
+        }
+        if (await(exists)) await(async {
+          val r = getRecord(id);
+          println(r);
+          r
+        })
+        else (id, "Record not found!")
+      }
     }
   }
 
