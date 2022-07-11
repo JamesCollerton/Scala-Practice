@@ -8,3 +8,5 @@ idePackagePrefix := Some("org.example.application")
 
 libraryDependencies += "com.fasterxml.jackson.core" % "jackson-databind" % "2.4.0"
 libraryDependencies += "org.scala-lang.modules" %% "scala-async" % "0.10.0"
+libraryDependencies += "org.scala-lang" % "scala-reflect" % scalaVersion.value % Provided
+
