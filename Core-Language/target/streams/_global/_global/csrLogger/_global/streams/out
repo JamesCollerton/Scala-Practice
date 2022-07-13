@@ -1,4 +1,12 @@
-[debug] downloaded https://repo1.maven.org/maven2/org/scala-lang/modules/scala-async_2.13/0.10.0/scala-async_2.13-0.10.0.pom
-[debug] downloaded https://repo1.maven.org/maven2/org/scala-lang/modules/scala-async_2.13/0.10.0/scala-async_2.13-0.10.0.jar
-[debug] downloaded https://repo1.maven.org/maven2/org/scala-lang/modules/scala-async_2.13/0.10.0/scala-async_2.13-0.10.0-javadoc.jar
-[debug] downloaded https://repo1.maven.org/maven2/org/scala-lang/modules/scala-async_2.13/0.10.0/scala-async_2.13-0.10.0-sources.jar
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-typed_2.13/2.6.19/akka-actor-typed_2.13-2.6.19.pom
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.13/2.6.19/akka-slf4j_2.13-2.6.19.pom
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.13/2.6.19/akka-actor-testkit-typed_2.13-2.6.19.pom
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-typed_2.13/2.6.19/akka-actor-typed_2.13-2.6.19.jar
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.13/2.6.19/akka-slf4j_2.13-2.6.19.jar
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.13/2.6.19/akka-actor-testkit-typed_2.13-2.6.19.jar
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.13/2.6.19/akka-actor-testkit-typed_2.13-2.6.19-sources.jar
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.13/2.6.19/akka-slf4j_2.13-2.6.19-javadoc.jar
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-typed_2.13/2.6.19/akka-actor-typed_2.13-2.6.19-sources.jar
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.13/2.6.19/akka-slf4j_2.13-2.6.19-sources.jar
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-typed_2.13/2.6.19/akka-actor-typed_2.13-2.6.19-javadoc.jar
+[debug] downloaded https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor-testkit-typed_2.13/2.6.19/akka-actor-testkit-typed_2.13-2.6.19-javadoc.jar
