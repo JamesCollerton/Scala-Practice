@@ -21,6 +21,16 @@ import scala.io.StdIn
     https://doc.akka.io/docs/akka-http/current/routing-dsl/exception-handling.html
 
   What is a No-Op?
+
+  Implications of Streaming Nature of Requests/ Responses
+
+  Essentially, using a streaming framework means lack of consumption of the HTTP Entity, is signaled as back-pressure
+  to the other side of the connection. This means clients must consume responses for the connection to be freed up by
+  Akka.
+
+  This is a feature as it means responses can be consumed only on demand when the client is ready to consume the bytes.
+
+  https://doc.akka.io/docs/akka-http/current/implications-of-streaming-http-entity.html
  */
 object HttpServerRoutingMinimal {
 
