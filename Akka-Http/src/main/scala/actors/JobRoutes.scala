@@ -15,8 +15,10 @@ class JobRoutes(buildJobRepository: ActorRef[JobRepository.Command])(implicit sy
   import akka.actor.typed.scaladsl.AskPattern.schedulerFromActorSystem
   import akka.actor.typed.scaladsl.AskPattern.Askable
 
-  // asking someone requires a timeout and a scheduler, if the timeout hits without response
-  // the ask is failed with a TimeoutException
+  /*
+   Asking someone requires a timeout and a scheduler, if the timeout hits without response the ask is failed with a TimeoutException,
+   note that this is implicitly done
+   */
   implicit val timeout: Timeout = 3.seconds
 
   lazy val theJobRoutes: Route =
@@ -25,6 +27,10 @@ class JobRoutes(buildJobRepository: ActorRef[JobRepository.Command])(implicit sy
         pathEnd {
           concat(
             post {
+              /*
+                entity(as[JobRepository.Job]) seems to be the standard way of specifying what we think the message body
+                will be.
+               */
               entity(as[JobRepository.Job]) { job =>
                 val operationPerformed: Future[JobRepository.Response] =
                   buildJobRepository.ask(JobRepository.AddJob(job, _))
@@ -36,7 +42,7 @@ class JobRoutes(buildJobRepository: ActorRef[JobRepository.Command])(implicit sy
             },
             delete {
               val operationPerformed: Future[JobRepository.Response] =
-                buildJobRepository.ask(JobRepository.ClearJobs(_))
+                buildJobRepository.ask(JobRepository.ClearJobs)
               onSuccess(operationPerformed) {
                 case JobRepository.OK         => complete("Jobs cleared")
                 case JobRepository.KO(reason) => complete(StatusCodes.InternalServerError -> reason)
@@ -44,9 +50,16 @@ class JobRoutes(buildJobRepository: ActorRef[JobRepository.Command])(implicit sy
             }
           )
         },
+        /*
+          The ampersand is an equivalent to nesting paths
+         */
         (get & path(LongNumber)) { id =>
-          val maybeJob: Future[Option[JobRepository.Job]] =
+          val maybeJob: Future[Option[JobRepository.Job]] = {
             buildJobRepository.ask(JobRepository.GetJobById(id, _))
+          /*
+            rejectEmptyResponse is wrapped round the complete method to make a 404 if nothing is found
+           */
+          }
           rejectEmptyResponse {
             complete(maybeJob)
           }
