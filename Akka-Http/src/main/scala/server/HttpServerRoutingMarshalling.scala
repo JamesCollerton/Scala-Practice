@@ -1,18 +1,18 @@
 package org.example.application
+package server
 
+import akka.Done
 import akka.actor.typed.ActorSystem
 import akka.actor.typed.scaladsl.Behaviors
 import akka.http.scaladsl.Http
-import akka.Done
-import akka.http.scaladsl.server.Route
-import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.model.StatusCodes
-import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
-import spray.json.DefaultJsonProtocol._
+import akka.http.scaladsl.server.Directives.{as, complete, concat, entity, get, onSuccess, path, pathPrefix, post}
+import akka.http.scaladsl.server.Route
+import spray.json.DefaultJsonProtocol.{jsonFormat1, jsonFormat2}
 import spray.json.RootJsonFormat
 
-import scala.io.StdIn
 import scala.concurrent.Future
+import scala.io.StdIn
 
 object HttpServerRoutingMarshalling {
 
@@ -26,6 +26,7 @@ object HttpServerRoutingMarshalling {
     serialized using Spray. I'm assuming this is done through an implicit support.
    */
   final case class Item(name: String, id: Long)
+
   final case class Order(items: List[Item])
 
   /*
@@ -49,9 +50,11 @@ object HttpServerRoutingMarshalling {
   def saveOrder(order: Order): Future[Done] = {
     orders = order match {
       case Order(items) => items ::: orders
-      case _            => orders
+      case _ => orders
     }
-    Future { Done }
+    Future {
+      Done
+    }
   }
 
   def main(args: Array[String]): Unit = {
@@ -75,7 +78,7 @@ object HttpServerRoutingMarshalling {
              */
             onSuccess(maybeItem) {
               case Some(item) => complete(item)
-              case None       => complete(StatusCodes.NotFound)
+              case None => complete(StatusCodes.NotFound)
             }
           }
         },

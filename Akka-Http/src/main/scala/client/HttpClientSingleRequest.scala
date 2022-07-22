@@ -1,9 +1,10 @@
 package org.example.application
+package org.example.application.client
 
 import akka.actor.typed.ActorSystem
 import akka.actor.typed.scaladsl.Behaviors
 import akka.http.scaladsl.Http
-import akka.http.scaladsl.model._
+import akka.http.scaladsl.model.{HttpRequest, HttpResponse}
 
 import scala.concurrent.{ExecutionContextExecutor, Future}
 import scala.util.{Failure, Success}
@@ -39,7 +40,7 @@ object HttpClientSingleRequest {
     responseFuture
       .onComplete {
         case Success(res) => println(res)
-        case Failure(_)   => sys.error("something wrong")
+        case Failure(_) => sys.error("something wrong")
       }
   }
 }

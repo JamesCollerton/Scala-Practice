@@ -1,10 +1,11 @@
 package org.example.application
+package server
 
 import akka.actor.typed.ActorSystem
 import akka.actor.typed.scaladsl.Behaviors
 import akka.http.scaladsl.Http
-import akka.http.scaladsl.model._
-import akka.http.scaladsl.server.Directives._
+import akka.http.scaladsl.model.{ContentTypes, HttpEntity}
+import akka.http.scaladsl.server.Directives.{complete, get, path}
 import akka.http.scaladsl.server.Route
 
 import scala.concurrent.{ExecutionContextExecutor, Future}
@@ -31,6 +32,8 @@ import scala.io.StdIn
   This is a feature as it means responses can be consumed only on demand when the client is ready to consume the bytes.
 
   https://doc.akka.io/docs/akka-http/current/implications-of-streaming-http-entity.html
+
+  Become pattern
  */
 object HttpServerRoutingMinimal {
 
