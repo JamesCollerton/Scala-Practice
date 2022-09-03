@@ -1,0 +1,8 @@
+[0m[[0m[33mwarn[0m] [0m[0m/Users/JamesCollerton/Documents/Programming/Git_Folders/Scala-Practice/Core-Language/src/main/scala/futures/AsyncExample.scala:43:24: method without a parameter list overrides a method with a single empty one[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val exists = async {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/JamesCollerton/Documents/Programming/Git_Folders/Scala-Practice/Core-Language/src/main/scala/patternmatching/PatternMatchingExamples.scala:55:5: match may not be exhaustive.[0m
+[0m[[0m[33mwarn[0m] [0m[0mIt would fail on the following input: Person((x: String forSome x not in "Joe"), (x: Int forSome x not in (10, 11)))[0m
+[0m[[0m[33mwarn[0m] [0m[0m    person match {[0m
+[0m[[0m[33mwarn[0m] [0m[0m    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m

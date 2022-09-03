@@ -1,2 +1,7 @@
-[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /Users/collej02/Documents/Personal/Git_Folders/Scala-Practice/Akka-Http/target/scala-2.13/classes.bak[0m
-[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /Users/collej02/Documents/Personal/Git_Folders/Scala-Practice/Akka-Http/target/scala-2.13/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /Users/JamesCollerton/Documents/Programming/Git_Folders/Scala-Practice/Akka-Http/target/scala-2.13/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRolling back changes to class files.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRestoring class files: [0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /Users/JamesCollerton/Documents/Programming/Git_Folders/Scala-Practice/Akka-Http/target/scala-2.13/classes.bak[0m

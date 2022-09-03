@@ -1,0 +1,21 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/JamesCollerton/Documents/Programming/Git_Folders/Scala-Practice/Akka-Http/src/main/scala/server/HttpServerRoutingMarshalling.scala:36:62: could not find implicit value for evidence parameter of type spray.json.DefaultJsonProtocol.JF[String] (Cannot find JsonWriter or JsonFormat type class for String)[0m
+[0m[[0m[31merror[0m] [0m[0m  implicit val itemFormat: RootJsonFormat[Item] = jsonFormat2(Item)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/JamesCollerton/Documents/Programming/Git_Folders/Scala-Practice/Akka-Http/src/main/scala/server/HttpServerRoutingMarshalling.scala:37:64: could not find implicit value for evidence parameter of type spray.json.DefaultJsonProtocol.JF[List[org.example.application.server.HttpServerRoutingMarshalling.Item]] (Cannot find JsonWriter or JsonFormat type class for List[org.example.application.server.HttpServerRoutingMarshalling.Item])[0m
+[0m[[0m[31merror[0m] [0m[0m  implicit val orderFormat: RootJsonFormat[Order] = jsonFormat1(Order)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/JamesCollerton/Documents/Programming/Git_Folders/Scala-Practice/Akka-Http/src/main/scala/server/HttpServerRoutingMarshalling.scala:71:29: value / is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m          pathPrefix("item" / LongNumber) { id =>[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/JamesCollerton/Documents/Programming/Git_Folders/Scala-Practice/Akka-Http/src/main/scala/server/HttpServerRoutingMarshalling.scala:71:31: not found: value LongNumber[0m
+[0m[[0m[31merror[0m] [0m[0m          pathPrefix("item" / LongNumber) { id =>[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/JamesCollerton/Documents/Programming/Git_Folders/Scala-Practice/Akka-Http/src/main/scala/server/HttpServerRoutingMarshalling.scala:80:43: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : org.example.application.server.HttpServerRoutingMarshalling.Item[0m
+[0m[[0m[31merror[0m] [0m[0m required: akka.http.scaladsl.marshalling.ToResponseMarshallable[0m
+[0m[[0m[31merror[0m] [0m[0m              case Some(item) => complete(item)[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/JamesCollerton/Documents/Programming/Git_Folders/Scala-Practice/Akka-Http/src/main/scala/server/HttpServerRoutingMarshalling.scala:87:22: could not find implicit value for parameter um: akka.http.scaladsl.unmarshalling.FromRequestUnmarshaller[org.example.application.server.HttpServerRoutingMarshalling.Order][0m
+[0m[[0m[31merror[0m] [0m[0m            entity(as[Order]) { order =>[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
