@@ -30,6 +30,18 @@ object BasicExamples{
 
     println("Hello from main of object")
 
+    val immutableString = "Can't change me!"
+    var mutableString = "Change me!"
+
+    println(immutableString)
+    println(mutableString)
+
+    mutableString = "I've been changed!"
+
+    println(mutableString)
+
+    val explicitString: String = "Explicit String!"
+
     /*
       There are two types of variable: val and var. Val is used for immutable values (i.e. we can't point them to
       something else), var is used for mutable ones
